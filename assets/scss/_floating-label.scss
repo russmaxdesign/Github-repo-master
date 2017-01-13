@@ -1,0 +1,127 @@
+// variables
+
+$color-placeholder: #777;
+$color-focus: blue;
+$color-success: green;
+
+
+// input-container
+
+.input-container {
+  position: relative;
+  margin: 2em 0;
+}
+
+
+// input
+
+.input-container__input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: .5em .5em .5em 0;
+  background: #fff;
+  font-size: 1em;
+}
+
+
+// input when in focus
+
+.input-container__input:focus {
+  border-bottom: 1px solid $color-focus;
+  outline: none;
+}
+
+
+// input when in focus and valid - filled in
+
+.input-container__input:focus:valid {
+  border-bottom: 1px solid $color-success;
+}
+
+
+// label
+
+.input-container__label {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  opacity: 0;
+  color: $color-focus;
+  font-size: 12px;
+}
+
+
+// label when in focus
+
+.input-container__input:focus + .input-container__label {
+  opacity: 1;
+
+  transition: .5s ease;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+
+// label when valid - filled in
+
+.input-container__input:valid + .input-container__label {
+  opacity: 1;
+  color: $color-placeholder;
+
+  transition: .5s ease;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+
+// label when in focus and valid - filled in
+
+.input-container__input:focus:valid + .input-container__label {
+  color: $color-success;
+}
+
+
+// placeholder
+
+::-webkit-input-placeholder {
+  opacity: 1;
+  color: $color-placeholder;
+}
+
+:-moz-placeholder {
+  opacity: 1;
+  color: $color-placeholder;
+}
+
+::-moz-placeholder {
+  opacity: 1;
+  color: $color-placeholder;
+}
+
+:-ms-input-placeholder {
+  opacity: 1;
+  color: $color-placeholder;
+}
+
+// placeholder - become hidden when in focus
+
+.input-container__input:focus::-webkit-input-placeholder {
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.input-container__input:focus:-moz-placeholder {
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.input-container__input:focus::-moz-placeholder {
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.input-container__input:focus:-ms-input-placeholder {
+  opacity: 0;
+  transition: 1s ease;
+}

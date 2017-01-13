@@ -1,0 +1,44 @@
+// details
+
+.details {
+  position: relative;
+  margin: 0 0 .3em;
+}
+
+.details__summary {
+  padding: .3em .3em .4em 28px;
+  cursor: pointer;
+  background: #eee;
+}
+
+.details__summary:hover,
+.details__summary:focus {
+  background: #ddd;
+}
+
+.details__summary:active {
+  background: #ccc;
+}
+
+.details__summary::-webkit-details-marker {
+  display: none;
+}
+
+.details__summary:before {
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  content: '';
+  background: url(../img/details-closed.png);
+}
+
+.details[open] .details__summary:before {
+  background: url(../img/details-open.png);
+}
+
+.details__content {
+  margin: .6em 0 1.5em;
+}

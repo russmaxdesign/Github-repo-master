@@ -1,0 +1,132 @@
+// variables
+
+$select-border-color: #ccc;
+$select-color: #888;
+$select-dropdown-arrow: #666;
+$select-background-color: #fff;
+$select-background-hover-color: #efefef;
+$select-background-disabled-color: #eee;
+$select-height: 2em;
+
+
+
+// select parent container
+
+.select {
+  margin-bottom: 1.5em;
+}
+
+
+// select label content
+
+.select__content {
+  display: block;
+  margin: 0 0 .2em;
+}
+
+
+// select control container
+// wraps around select element - used to style the border, border-radius
+
+.select__control-container {
+  position: relative;
+  display: block;
+  border: 1px solid $select-border-color;
+  border-radius: .2em;
+  background: $select-background-color;
+}
+
+.select__control-container:hover {
+  background: $select-background-hover-color;
+}
+
+
+// select control container before
+// adds a box over the top of the default dropdown arrows
+
+.select__control-container::before {
+  position: absolute;
+  z-index: 1;
+  top: 2px;
+  right: 1px;
+  bottom: 1px;
+  display: block;
+  width: 1em;
+  content: '';
+  background: $select-background-color;
+  pointer-events: none;
+}
+
+.select__control-container:hover::before {
+  background: $select-background-hover-color;
+}
+
+
+// select control container after
+// adds dropdown arrow
+
+.select__control-container::after {
+  position: absolute;
+  z-index: 2;
+  top: 40%;
+  right: .5em;
+  width: 0;
+  height: 0;
+  border-top: 7px solid $select-dropdown-arrow;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  content: '';
+  pointer-events: none;
+}
+
+
+// the select control
+
+.select__control {
+  display: block;
+  width: 100%;
+  height: $select-height;
+  border: 1px solid transparent;
+  border-radius: .2em;
+  padding: 0 .5em;
+  cursor: pointer;
+  color: $select-color;
+  background: transparent;
+  font-size: 1em;
+  line-height: $select-height;
+}
+
+
+// disabled
+
+.select--disabled .select__content {
+  color: #aaa;
+}
+
+.select--disabled .select__control-container {
+  border: 1px solid lighten($select-border-color, 5%);
+  background: $select-background-disabled-color;
+}
+
+.select--disabled .select__control-container::before {
+  background: $select-background-disabled-color;
+}
+
+.select--disabled .select__control-container::after {
+  border-top: 7px solid lighten($select-dropdown-arrow, 40%);
+}
+
+.select--disabled .select__control {
+  cursor: not-allowed;
+  color: lighten($select-color, 15%);
+}
+
+
+// required
+
+.select--required .select__content:after {
+  display: inline-block;
+  padding: 0 0 0 .2em;
+  content: '*';
+  color: red;
+}

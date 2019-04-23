@@ -63,12 +63,16 @@
   line-height: 2.2em;
 }
 
+.input__control:focus {
+  outline: 2px dotted $black;
+}
+
 
 // button-primary
 
 .button-primary {
   height: 2.2em;
-  border: 1px solid darken($link-color, 10%);
+  border: $link-color;
   border-radius: .2em;
   padding: 0 1em;
   cursor: pointer;
@@ -79,15 +83,18 @@
   line-height: 2.2em;
 }
 
-.button-primary:focus,
+.button-primary:focus {
+  outline: 2px dotted $black;
+}
+
 .button-primary:hover {
-  border: 1px solid darken($link-color-hover, 10%);
+  border: $link-color-hover;
   color: $white;
   background: $link-color-hover;
 }
 
 .button-primary:active {
-  border: 1px solid darken($link-color-active, 10%);
+  border: $link-color-active;
   color: $white;
   background: $link-color-active;
 }
@@ -108,7 +115,10 @@
   line-height: 2.2em;
 }
 
-.button-secondary:focus,
+.button-secondary:focus {
+  outline: 2px dotted $black;
+}
+
 .button-secondary:hover {
   color: $link-color-hover;
   background: $gray5;

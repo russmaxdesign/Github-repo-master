@@ -731,7 +731,7 @@ a:visited {
   color: #1461b5; }
 
 a:focus {
-  outline: 2px dotted #000; }
+  outline: 0; }
 
 a:hover {
   color: #11549e; }
@@ -838,9 +838,6 @@ dd {
   font-size: 1em;
   line-height: 2.2em; }
 
-.input__control:focus {
-  outline: 2px dotted #000; }
-
 .button-primary {
   height: 2.2em;
   border: #166DCC;
@@ -853,9 +850,7 @@ dd {
   font-size: 1em;
   line-height: 2.2em; }
 
-.button-primary:focus {
-  outline: 2px dotted #000; }
-
+.button-primary:focus,
 .button-primary:hover {
   border: #11549e;
   color: #fff;
@@ -878,9 +873,7 @@ dd {
   font-size: 1em;
   line-height: 2.2em; }
 
-.button-secondary:focus {
-  outline: 2px dotted #000; }
-
+.button-secondary:focus,
 .button-secondary:hover {
   color: #11549e;
   background: #f2f2f2; }

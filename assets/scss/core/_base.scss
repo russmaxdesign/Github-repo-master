@@ -22,23 +22,23 @@ body {
 
 h1 {
   margin: 0 0 .5em;
-  font-size: 1.8em;
+  font-size: 2em;
 }
 
 h2 {
   margin: 1em 0 .5em;
-  font-size: 1.4em;
+  font-size: 1.5em;
 }
 
 h3 {
   margin: 1.5em 0 .3em;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: bold;
 }
 
 h4 {
   margin: 1.5em 0 .3em;
-  font-size: .88888888em;
+  font-size: 1em;
 }
 
 h1,
@@ -75,7 +75,10 @@ a:visited {
   color: $link-color-visited;
 }
 
-a:focus,
+a:focus {
+  outline: 2px dotted $black;
+}
+
 a:hover {
   color: $link-color-hover;
 }
@@ -104,10 +107,10 @@ figure {
 }
 
 figcaption {
-  font-size: $font14;
-  color: $gray55;
   display: block;
   margin: .4em 0;
+  color: $gray55;
+  font-size: $font14;
 }
 
 
@@ -146,8 +149,10 @@ th {
 ul,
 ol {
   padding-left: 1.5em;
+
   li {
     margin-bottom: .2em;
+    line-height: 1.5;
   }
 }
 
